@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/*
+  A warm, paper-like surface with a single ochre accent. The app is mostly
+  reading — names, notes, dates — so the type does the work and the chrome
+  stays quiet.
+*/
+@theme {
+  --color-paper: #faf7f2;
+  --color-card: #fffdfa;
+  --color-ink: #1c1a17;
+  --color-ink-soft: #6f6862;
+  --color-ink-faint: #9a938b;
+  --color-line: #e7e1d8;
+  --color-line-soft: #f0ebe3;
+  --color-accent: #a2521f;
+  --color-accent-soft: #f6ece3;
+  --color-overdue: #a13c2f;
+  --color-birthday: #8a5a20;
+  --color-wildcard: #46664f;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+}
+
+/* Inputs inherit the paper, not the browser's grey. */
+input, textarea, select, button {
+  font: inherit;
+  color: inherit;
+}
+
+textarea {
+  field-sizing: content;
+}
+
+@utility card {
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: 0.875rem;
+}
+
+@utility label-xs {
+  font-size: 0.6875rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-ink-faint);
+}
