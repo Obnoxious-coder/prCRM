@@ -24,6 +24,9 @@ Rules:
   follow-up feel personal. Keep the writer's own phrasing.
 - \`how_we_met\` is the event, place or occasion, without the city (the city has
   its own field).
+- \`company\` takes a description when there is no name: "runs growth at a lending
+  startup" is company "a lending startup", role "growth". An unnamed employer is
+  still worth recording — it is what you will recognise them by later.
 - Birthdays are frequently day and month only. Set \`year\` to null rather than
   guessing one.
 - \`tags\` are invented freely; do not force a fixed vocabulary. Use \`kind\`
