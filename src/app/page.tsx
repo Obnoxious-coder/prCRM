@@ -36,7 +36,10 @@ export default async function HomePage() {
           Who did you meet?
         </h1>
         <p className="text-ink-soft mb-4 text-sm">
-          One sentence. Name is the only field that matters — everything else is a bonus.
+          One sentence. Name is the only field that matters — everything else is a bonus.{" "}
+          <Link href="/guide#capture" className="text-accent hover:underline">
+            How it works
+          </Link>
         </p>
         <CaptureBox providerLabel={providerLabel} />
       </section>
@@ -52,6 +55,7 @@ export default async function HomePage() {
         <section>
           <SectionHeading
             title="Saved views"
+            help="tags"
             hint="The three or four filters you actually use become the real home screen."
           />
           <div className="grid gap-3 sm:grid-cols-3">
@@ -76,6 +80,7 @@ export default async function HomePage() {
       <section>
         <SectionHeading
           title="This week's five"
+          help="digest"
           hint="What Monday's digest would say if it went out now."
           action={
             <Link href="/digest" className="text-accent text-sm hover:underline">
@@ -118,6 +123,7 @@ export default async function HomePage() {
         <section>
           <SectionHeading
             title="Your connectors"
+            help="network"
             hint="People whose relationship compounds."
             action={
               <Link href="/network" className="text-accent text-sm hover:underline">
@@ -145,7 +151,8 @@ export default async function HomePage() {
         </section>
 
         <section>
-          <SectionHeading title="Most overdue" hint="Normalised by cadence, not raw days." />
+          <SectionHeading title="Most overdue"
+            help="nudges" hint="Normalised by cadence, not raw days." />
           {overdue.length === 0 ? (
             <Empty>Nobody is overdue.</Empty>
           ) : (

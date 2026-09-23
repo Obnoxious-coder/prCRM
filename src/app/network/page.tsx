@@ -18,6 +18,7 @@ export default async function NetworkPage() {
       <section>
         <SectionHeading
           title="Connectors"
+          help="network"
           hint="How many people each contact brought you. Sort descending and you have your connectors."
         />
         {ranked.length === 0 ? (

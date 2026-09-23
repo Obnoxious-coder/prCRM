@@ -40,6 +40,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 </Link>
               ))}
             </nav>
+            <Link
+              href="/guide"
+              title="How this works"
+              aria-label="How this works"
+              className="border-line text-ink-soft hover:border-ink/30 hover:text-ink ml-auto flex h-7 w-7 items-center justify-center rounded-full border font-serif text-[0.9rem] leading-none transition-colors"
+            >
+              i
+            </Link>
           </div>
         </header>
         <main className="mx-auto max-w-5xl px-5 py-8">{children}</main>

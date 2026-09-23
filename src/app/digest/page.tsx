@@ -22,6 +22,7 @@ export default async function DigestPage() {
       <section>
         <SectionHeading
           title="Weekly digest"
+          help="digest"
           hint={`One ${settings.digest_frequency === "weekly" ? "email every Monday" : "email every other Monday"} with five people. Next: ${formatDate(nextDigestDate(today, settings.digest_frequency, latest))}.`}
           action={<SendDigest label={latest?.sent_on === today ? "Rebuild now" : "Send now"} />}
         />

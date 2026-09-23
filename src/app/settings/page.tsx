@@ -97,6 +97,7 @@ RESEND_API_KEY=re_...`}</pre>
       <section>
         <SectionHeading
           title="Parse log"
+          help="settings"
           hint="Every raw input alongside its parsed output, from day one — so when it gets something wrong you can see exactly what it saw."
         />
         {logs.length === 0 ? (

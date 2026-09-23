@@ -6,19 +6,38 @@ export function SectionHeading({
   title,
   hint,
   action,
+  help,
 }: {
   title: string;
   hint?: string;
   action?: React.ReactNode;
+  /** Anchor id on /guide — renders a small ⓘ that jumps to the explanation. */
+  help?: string;
 }) {
   return (
     <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
       <div>
-        <h2 className="font-serif text-xl leading-tight">{title}</h2>
+        <h2 className="font-serif flex items-baseline gap-1.5 text-xl leading-tight">
+          {title}
+          {help && <HelpDot anchor={help} label={`How ${title.toLowerCase()} works`} />}
+        </h2>
         {hint && <p className="text-ink-soft mt-0.5 text-[0.8125rem]">{hint}</p>}
       </div>
       {action}
     </div>
+  );
+}
+
+export function HelpDot({ anchor, label }: { anchor: string; label: string }) {
+  return (
+    <Link
+      href={`/guide#${anchor}`}
+      title={label}
+      aria-label={label}
+      className="border-line text-ink-faint hover:border-ink/30 hover:text-ink inline-flex h-[1.05rem] w-[1.05rem] shrink-0 translate-y-[-1px] items-center justify-center rounded-full border text-[0.65rem] leading-none transition-colors"
+    >
+      i
+    </Link>
   );
 }
 

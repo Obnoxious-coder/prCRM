@@ -20,6 +20,7 @@ export default async function TagsPage() {
     <div className="space-y-10">
       <SectionHeading
         title="Tags"
+        help="tags"
         hint="Keep the taxonomy loose. The parser invents tags freely; near-duplicates get merged here."
       />
 

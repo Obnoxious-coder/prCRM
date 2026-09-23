@@ -95,7 +95,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
       </header>
 
       <section>
-        <SectionHeading title="Cadence" hint={statusLine(overdue, person.cadence_days, isSnoozed(person, today))} />
+        <SectionHeading help="cadence" title="Cadence" hint={statusLine(overdue, person.cadence_days, isSnoozed(person, today))} />
         <CadencePicker person={person} />
         <div className="mt-2 flex flex-wrap items-center gap-4">
           <SnoozeControls person={person} />
@@ -106,7 +106,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
       </section>
 
       <section>
-        <SectionHeading title="Notes" hint="The soft layer. This is what makes a follow-up personal." />
+        <SectionHeading help="notes" title="Notes" hint="The soft layer. This is what makes a follow-up personal." />
         {person.notes ? (
           <p className="card text-[0.9375rem] leading-relaxed whitespace-pre-wrap p-4">{person.notes}</p>
         ) : (
@@ -118,7 +118,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
       </section>
 
       <section>
-        <SectionHeading title="History" hint={`${interactions.length} logged`} />
+        <SectionHeading help="log" title="History" hint={`${interactions.length} logged`} />
         {interactions.length === 0 ? (
           <Empty>No interactions yet. Tap Log above.</Empty>
         ) : (

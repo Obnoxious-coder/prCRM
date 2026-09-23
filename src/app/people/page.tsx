@@ -34,6 +34,7 @@ export default async function PeoplePage({
     <div>
       <SectionHeading
         title="People"
+        help="tags"
         hint={`${results.length} ${results.length === 1 ? "person" : "people"} — ${describeFilters(filters)}`}
       />
       <Suspense fallback={null}>
